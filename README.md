@@ -18,3 +18,6 @@ This project demonstrates core backend development skills including Django model
 ## 🎯 Purpose
 
 The purpose of this project is to understand and implement backend development concepts using Django and build a real-world application.
+
+
+
