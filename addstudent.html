@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Add Student</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    
+    <label>Name:</label>
+    <input type="text" name="name" placeholder="Name"><br><br>
+
+    <label>Age:</label>
+    <input type="number" name="age" placeholder="age"><br><br>
+
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="Email"><br><br>
+
+    <label>Phone:</label>
+    <input type="text" name="phone" placeholder="Phone"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
