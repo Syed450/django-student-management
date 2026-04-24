@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2 style="text-align:center;">Add Student</h2>
+
+<div style="width:400px; margin:auto; border:1px solid gray; padding:20px; border-radius:10px;">
+
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="name" placeholder="Name" style="width:100%; padding:10px; margin-bottom:10px;">
+
+    <input type="number" name="age" placeholder="Age" style="width:100%; padding:10px; margin-bottom:10px;">
+
+    <input type="email" name="email" placeholder="Email" style="width:100%; padding:10px; margin-bottom:10px;">
+
+    <input type="text" name="phone" placeholder="Phone" style="width:100%; padding:10px; margin-bottom:10px;">
+
+    <button style="width:100%; padding:10px; background-color:green; color:white;">
+        Add Student
+    </button>
+
+</form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2 style="text-align:center;">Student List</h2>
+
+<table border="1" style="width:100%; text-align:center; border-collapse:collapse;">
+
+    <tr style="background-color:lightgray;">
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for s in data %}
+    <tr>
+        <td>{{ s.name }}</td>
+        <td>{{ s.age }}</td>
+        <td>{{ s.email }}</td>
+        <td>{{ s.phone }}</td>
+        <td>
+            <a href="/edit_student/{{ s.id }}/">Edit</a> |
+            <a href="/delete_student/{{ s.id }}/" onclick="return confirm('Are you sure?')">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

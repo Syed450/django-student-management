@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 style="text-align:center;">Student Management System<h1>
+<h2 style="text-align:center;">Login</h2>
+
+<div style="width:300px; margin:auto; border:1px solid gray; padding:20px;">
+    {% if messages %}
+  {% for message in messages %}
+    <p style="color:red; text-align:center;">{{ message }}</p>
+  {% endfor %}
+{% endif %}
+
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="username" placeholder="Username" style="width:100%; padding:10px; margin-bottom:10px;">
+
+    <input type="password" name="password" placeholder="Password" style="width:100%; padding:10px; margin-bottom:10px;">
+
+    <button style="width:100%; padding:10px; background-color:black; color:white;">
+        Login
+    </button>
+
+</form>
+
+</div>
+
+{% endblock %}

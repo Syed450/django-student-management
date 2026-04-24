@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2 style="text-align:center;">Edit Student</h2>
+
+<div style="width:400px; margin:auto; border:1px solid gray; padding:20px; border-radius:10px;">
+
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="name" value="{{ data.name }}" style="width:100%; padding:10px; margin-bottom:10px;">
+
+    <input type="number" name="age" value="{{ data.age }}" style="width:100%; padding:10px; margin-bottom:10px;">
+
+    <input type="email" name="email" value="{{ data.email }}" style="width:100%; padding:10px; margin-bottom:10px;">
+
+    <input type="text" name="phone" value="{{ data.phone }}" style="width:100%; padding:10px; margin-bottom:10px;">
+
+    <button style="width:100%; padding:10px; background-color:blue; color:white;">
+        Update
+    </button>
+
+</form>
+
+</div>
+
+{% endblock %}
